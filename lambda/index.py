@@ -22,7 +22,7 @@ def extract_region_from_arn(arn):
 # MODEL_ID = os.environ.get("MODEL_ID", "us.amazon.nova-lite-v1:0")
 
 # ngrokのURL
-NGROK_URL = "https://c2e1-34-125-181-135.ngrok-free.app"
+NGROK_URL = "https://ba4e-34-90-155-204.ngrok-free.app"
 
 def lambda_handler(event, context):
     try:
