@@ -74,14 +74,21 @@ def lambda_handler(event, context):
                 })
         
         # invoke_model用のリクエストペイロード
+        # request_payload = {
+        #     "messages": bedrock_messages,
+        #     "inferenceConfig": {
+        #         "maxTokens": 512,
+        #         "stopSequences": [],
+        #         "temperature": 0.7,
+        #         "topP": 0.9
+        #     }
+        # }
         request_payload = {
-            "messages": bedrock_messages,
-            "inferenceConfig": {
-                "maxTokens": 512,
-                "stopSequences": [],
-                "temperature": 0.7,
-                "topP": 0.9
-            }
+            "prompt": "string",
+            "maxTokens": 512,
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "do_sample": True
         }
         
         # ngrokで公開されたAPIにリクエストを送信
